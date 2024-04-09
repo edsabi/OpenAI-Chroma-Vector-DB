@@ -1,6 +1,8 @@
 with open('file.txt', 'r') as f:
     openai_key= f.read().strip()
 
+from flask import Flask, render_template, request, jsonify
+
 import os 
 
 os.environ["OPENAI_API_KEY"] = openai_key
